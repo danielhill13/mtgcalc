@@ -8,6 +8,7 @@
 //term
 
 
+
 function mtgPymt (rate, dp, homeprice, ins, tax, hoa, term){
     console.log("Given an interest rate of " + rate * 100 + "%, a down payment of "+ dp + ", purchase price of "+ homeprice + ", yearly home insurance cost of " + ins + ", yearly HOA of " + hoa + ", and a payment term of " + term / 12 + "years..." );
     principal = homeprice - dp;
@@ -18,15 +19,15 @@ function mtgPymt (rate, dp, homeprice, ins, tax, hoa, term){
     payment = (hoaPayment + insPayment + taxPayment + piPayment) ;
     
     console.log("HOA: $" +hoaPayment);
-    console.log("Total monthly payment will be: $" +payment);
-    return payment;
+    console.log("Total monthly payment will be: $" +payment.toFixed(2));
+    return payment.toFixed(2);
 }
 function PI(rate, term, principal) {
     rate = rate / 12;
     pAndITop = rate * Math.pow(1 + rate, term);
     pAndIBottom = Math.pow(1 + rate, term) - 1;
     piPayment = principal * (pAndITop / pAndIBottom);
-    console.log("Principal + Interest: $"+ piPayment);
+    console.log("Principal + Interest: $"+ (piPayment));
     return piPayment;
 }
 function Taxes(taxrate, homeprice) {
@@ -42,7 +43,7 @@ function Insurance (ins){
     insPayment = ins/12;
     return insPayment;
 }
-mtgPymt (.06125, 154600, 386500, 1500, 0.0225, 0, 360);
+// mtgPymt (.06125, 154600, 386500, 1500, 0.0225, 0, 360);
 //Outputs
 //P&I per month
 //Taxes per month
