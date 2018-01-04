@@ -4,44 +4,45 @@
         <title>
             Mortgage Calculator
         </title>
-        <link rel="stylesheet" href="bootstrap.css">
-        <script src="jquery-3.2.1.js"></script>
-        <script src="bootstrap.js"></script>
-        <script src="calc.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/mtgcalc.css">
+        <script src="js/jquery-3.2.1.js"></script>
+
     </head>
 <body>
-    <form name="calcInput" action="" id="mtgCalcForm" method="POST">
-            <div class="input-group">
-                <label for="rate">Interest Rate</label>
-                <input  class="form-control"type="number" name="rate" id="intrate" placeholder= 4 >
+    <div class = "container">
+    <h1>Mortgage Calculator</h1>
+        <div class="row">
+            <div class="col-sm-8">
+                <form name="calcInput" action="" id="mtgCalcForm" method="POST">
+                    <label for="hp">Home Price</label>
+                    <input  class="form-control"type="number" name="homeprice" id="homeprice" placeholder= 386500>
+                    <label for="dp">Down Payment</label>
+                    <input  class="form-control"type="number" name="dp" id="dp" placeholder= 77300>
+                    <label for="rate">Interest Rate</label>
+                    <input  class="form-control"type="number" name="rate" id="intrate" placeholder= 4 >
+                    <label for="term">Loan Term (in months)</label>
+                    <input class="form-control" type="number" name="term" id="term" placeholder= 360>
+                    <label for="tax">Taxes (yearly)</label>
+                    <input class="form-control" type="number" name="tax" id="tax" placeholder= 2400>
+                    <label for="ins">Insurance (yearly)</label>
+                    <input class="form-control" type="number" name="ins" id="ins" placeholder= 1500>
+                    <label for="hoa">HOA (yearly)</label>
+                    <input class="form-control" type="number" name="hoa" id="hoa" placeholder= 600>
+                    <input type="Submit" class ="btn btn-primary">
+                </form>
             </div>
-            <div class="input-group">
-                <label for="dp">Down Payment</label>
-                <input  class="form-control"type="number" name="dp" id="dp" placeholder= 77300>
+                <div class="col-sm-4" style="border: 1px solid black;">
+                    <p id="homepriceResult"></p>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="hp">Home Price</label>
-                <input  class="form-control"type="number" name="homeprice" id="homeprice" placeholder= 386500>
-            </div>
-            <div class="input-group">
-                <label for="ins">Insurance (yearly)</label>
-                <input class="form-control" type="number" name="ins" id="ins" placeholder= 1500>
-            </div>
-            <div class="input-group">
-                <label for="tax">Taxes (yearly)</label>
-                <input class="form-control" type="number" name="tax" id="tax" placeholder= 2400>
-            </div>
-            <div class="input-group">
-                <label for="hoa">HOA (yearly)</label>
-                <input class="form-control" type="number" name="hoa" id="hoa" placeholder= 600>
-            </div>
-            <div class="input-group">
-                <label for="term">Loan Term (in months)</label>
-                <input class="form-control" type="number" name="term" id="term" placeholder= 360>
-            </div><br>
-            <button class="btn btn-primary" type="submit" onClick="javascript:alert('submitted')">Submit</button>
-
-        </form>
-
+        </div>
+        
 </body>
-</html>
+
+
+    
+    <script src="js/bootstrap.js"></script>
+    <script src="js/calc.js"></script>
+    </html>
+    
